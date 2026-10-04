@@ -1,6 +1,6 @@
 # Arcaea旧版潜力值计算器
 
-上传Arcaea成绩文件（CSV），计算旧版潜力值（b30）。
+大肥鱼写的网页小工具，可以上传Arcaea成绩文件（CSV）并计算旧版潜力值（b30）。
 
 [在线使用](https://aozoranisrsg.github.io/ArcaeaOldPotentialCalculator/)
 
