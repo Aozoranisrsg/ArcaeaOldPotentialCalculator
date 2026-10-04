@@ -258,17 +258,22 @@ tbody tr.r10-row:hover { background: rgba(123, 108, 255, 0.18); }
 
 .diff-tag {
   display: inline-block;
-  padding: 1px 7px;
+  min-width: 40px;        /* 新增：设定最小宽度 */
+  text-align: center;     /* 新增：让文字在中间居中 */
+  padding: 1px 4px;       /* 微调：因为有了固定宽度，左右内边距可以稍微减小 */
   border-radius: 4px;
   font-size: 11px;
   font-weight: 600;
+  box-sizing: border-box; /* 推荐加上：确保宽度计算包含内边距 */
 }
 
-.diff-0 { background: #3b3b5c; color: #aaa; }
-.diff-1 { background: #1e3a5f; color: #6cb8ff; }
-.diff-2 { background: #3d1a5c; color: #c084fc; }
-.diff-3 { background: #5c1a1a; color: #f87171; }
-.diff-4 { background: #5c4a1a; color: #fbbf24; }
+/* 难度标签颜色（匹配游戏内视觉效果） */
+.diff-0 { background: #3ca5d1; color: #fff; } /* Past - 蓝色 */
+.diff-1 { background: #5cb85c; color: #fff; } /* Present - 绿色 */
+.diff-2 { background: #9a59b5; color: #fff; } /* Future - 紫色 */
+.diff-3 { background: #c9302c; color: #fff; } /* Beyond - 红色 */
+.diff-4 { background: #6b5b95; color: #fff; } /* Eternal - 淡紫/蓝紫色 */
+.diff-inscribed { background: #2c3e78; color: #fff; } /* Inscribed - 深蓝/靛蓝色 */
 
 .clear-yes { color: var(--success); }
 .clear-no { color: #555; }

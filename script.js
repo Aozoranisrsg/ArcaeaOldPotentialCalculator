@@ -165,11 +165,19 @@
   }
 
   // ---------- 渲染 ----------
-  function diffName(d) {
+  function diffName(d, songId) {
+    // 针对特定歌曲的 Beyond 难度特殊处理
+    if (d === 3 && ['dreadarea', 'cataclysmcry', 'rivenpilgrim', 'deinosphainein'].includes(songId)) {
+      return 'INS';
+    }
     return ['PST', 'PRS', 'FTR', 'BYD', 'ETR'][d] || '?';
   }
 
-  function diffClass(d) {
+  function diffClass(d, songId) {
+    // 针对特定歌曲的 Beyond 难度特殊处理
+    if (d === 3 && ['dreadarea', 'cataclysmcry', 'rivenpilgrim', 'deinosphainein'].includes(songId)) {
+      return 'diff-inscribed';
+    }
     return 'diff-' + (d >= 0 && d <= 4 ? d : 0);
   }
 
@@ -245,7 +253,7 @@
         <tr class="${isR10 ? 'r10-row' : ''}">
           <td class="mono">${rank}</td>
           <td>${escapeHtml(item.songId)}</td>
-          <td><span class="diff-tag ${diffClass(item.difficulty)}">${diffName(item.difficulty)}</span></td>
+          <td><span class="diff-tag ${diffClass(item.difficulty, item.songId)}">${diffName(item.difficulty, item.songId)}</span></td>
           <td class="mono">${fmtScore(item.score)}</td>
           <td class="mono">${item.constant.toFixed(1)}</td>
           <td class="mono" style="color:#8888aa">${item.newPotential.toFixed(4)}</td>
