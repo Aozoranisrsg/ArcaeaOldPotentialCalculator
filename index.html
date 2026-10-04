@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcaea 旧版潜力值计算器</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Arcaea 旧版潜力值计算器</h1>
+  <p class="subtitle">上传新版（v7.0.0+）成绩 CSV，自动还原旧版 ptt（B30 + R10）</p>
+
+  <div id="dropZone">
+    <span class="drop-icon">📂</span>
+    <div class="drop-title">点击选择 或 拖拽 CSV 文件到这里</div>
+    <div class="drop-hint">支持新版 best_scores.csv 或全部成绩 CSV，自动识别并换算旧版单曲潜力值</div>
+    <input type="file" id="fileInput" accept=".csv,text/csv">
+  </div>
+
+  <div id="errorMsg"></div>
+
+  <div id="resultSection"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
