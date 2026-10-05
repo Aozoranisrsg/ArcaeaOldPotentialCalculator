@@ -343,3 +343,90 @@ tbody tr.r10-row:hover { background: rgba(123, 108, 255, 0.18); }
   thead th, tbody td { padding: 7px 6px; }
   .hide-mobile { display: none; }
 }
+
+/* 使用指南折叠样式 */
+.guide-details {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.guide-details[open] {
+  border-color: var(--accent);
+}
+
+.guide-details summary {
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; /* 隐藏默认的小三角 */
+}
+
+/* 隐藏 Safari 默认的小三角 */
+.guide-details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 自定义右侧的展开箭头 */
+.guide-details summary::after {
+  content: '▼';
+  font-size: 12px;
+  color: var(--text-dim);
+  transition: transform 0.3s ease;
+}
+
+.guide-details[open] summary::after {
+  transform: rotate(180deg); /* 展开时箭头向上 */
+}
+
+.guide-content {
+  padding: 0 20px 20px;
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 4px;
+  padding-top: 16px;
+}
+
+.guide-content h4 {
+  color: var(--text);
+  font-size: 14px;
+  margin: 16px 0 8px;
+}
+
+.guide-content ol, .guide-content ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.guide-content li {
+  margin-bottom: 6px;
+}
+
+.guide-content code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+  font-size: 13px;
+  color: var(--accent2);
+}
+
+.guide-content a {
+  color: var(--accent2);
+  text-decoration: none;
+}
+
+.guide-content a:hover {
+  text-decoration: underline;
+}
