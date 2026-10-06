@@ -129,10 +129,8 @@
 
     const code = yurisakiCode.value.trim();
 
-    if (!/^[A-Za-z0-9]{6}$/.test(code)) {
-      showYurisakiStatus('请输入正确的 6 位字母数字导出码', true);
-      yurisakiCode.focus();
-      return;
+    if (!/^[A-Za-z0-9]+$/.test(code)) {
+      throw new Error('导出代码只能包含字母和数字');
     }
 
     setYurisakiLoading(true);
