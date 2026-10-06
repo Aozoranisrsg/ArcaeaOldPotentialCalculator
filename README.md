@@ -20,7 +20,7 @@
 ### Yurisaki聊天导出
 
 对机器人发送/a export，获得一串地址，将其输入工具即可自动获取成绩并计算。
-或者你也可以访问'u.yurisaki.top/你的地址'，会直接下载你的成绩文件，然后把里面的best_scores.csv导入工具即可。
+或者你也可以访问`u.yurisaki.top/你的地址`，会直接下载你的成绩文件，然后把里面的best_scores.csv导入工具即可。
 
 ### Yurisaki网站导出
 
