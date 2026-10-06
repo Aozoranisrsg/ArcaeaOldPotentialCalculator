@@ -56,15 +56,21 @@
         </li>
       </ol>
 
-      <h4>方法一：Yurisaki 聊天导出（谁会用这个的教教我）</h4>
-      <p>对机器人发送 <code>/a export</code>，机器人会回复一串地址，然后我也不会用了（</p>
+      <h4>方法一：Yurisaki 聊天导出（推荐）</h4>
+      <p>对 Yurisaki 发送 <code>/a export</code>， Yurisaki 会回复一串地址，将地址填入下方，点击“获取成绩”后将自动获取成绩并计算。如果此方法失败，请使用备用方案。</p>
 
-      <h4>方法二：Yurisaki 网站导出（推荐）</h4>
+      <h4>方法一备用方案：</h4>
+      <ol>
+        <li>使用浏览器访问 <code>u.yurisaki.top/</code>，并在网址后方加上刚才获得的地址，将会直接下载你的成绩文件。</li>
+        <li>解压后可以看到三个 CSV 文件，<strong>本工具只需要其中的 best_scores.csv</strong>，将其放入下方文件选择框即可。</li>
+      </ol>
+
+      <h4>方法二：Yurisaki 网站导出</h4>
       <ol>
         <li>打开 Yurisaki 网站：<a href="https://arcaea.yurisaki.top" target="_blank">https://arcaea.yurisaki.top</a></li>
         <li>初次登录：用户名是你的 Arcaea 用户名或好友码。密码需要私信 Yurisaki 发送 <code>/a account otp</code> 获取。</li>
-        <li>登录后，在左侧找到“玩家数据”，等待加载完成，点击“导出”按钮。</li>
-        <li>获得三个 CSV 文件，<strong>本工具只需要其中的 best_scores.csv</strong>。</li>
+        <li>登录后，在左侧找到“玩家数据”，等待加载完成，点击“导出”按钮，下载成绩文件。</li>
+        <li>解压后，获得三个 CSV 文件，<strong>本工具只需要其中的 best_scores.csv</strong>，将其放入下方文件选择框即可。</li>
       </ol>
       <p style="font-size: 12px; margin-top: 10px; color: #666;">
         * 以防有人想知道另外两个是什么：all_scores 记录了所有谱面的成功推分记录，ratings 记录了 Yurisaki 记录的潜力值变化（乘了10倍）。
@@ -72,6 +78,48 @@
       
     </div>
   </details>
+
+  <!-- Yurisaki 导出码 -->
+  <section class="yurisaki-panel">
+    <div class="panel-corner corner-tl"></div>
+    <div class="panel-corner corner-tr"></div>
+    <div class="panel-corner corner-bl"></div>
+    <div class="panel-corner corner-br"></div>
+
+    <div class="yurisaki-header">
+      <div>
+        <div class="yurisaki-kicker">YURISAKI EXPORT</div>
+        <div class="yurisaki-title">使用 Yurisaki 导出地址</div>
+      </div>
+      <div class="yurisaki-mark">◆</div>
+    </div>
+
+    <div class="yurisaki-body">
+      <div class="yurisaki-description">
+        输入 Yurisaki 提供的导出地址，自动获取成绩并计算旧版潜力值。
+      </div>
+
+      <div class="yurisaki-input-row">
+        <input
+          type="text"
+          id="yurisakiCode"
+          class="yurisaki-input"
+          maxlength="6"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="输入 6 位导出码"
+          aria-label="Yurisaki 导出码"
+        >
+
+        <button type="button" id="yurisakiBtn" class="yurisaki-btn">
+          获取成绩
+          <b>→</b>
+        </button>
+      </div>
+
+      <div id="yurisakiStatus" class="yurisaki-status"></div>
+    </div>
+  </section>
 
   <div id="dropZone">
     <div class="panel-corner corner-tl"></div>
@@ -99,6 +147,7 @@
 </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script src="script.js"></script>
 <footer class="site-footer">
   <span>·</span>
