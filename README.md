@@ -1,6 +1,6 @@
 # Arcaea旧版潜力值计算器
 
-因为我很想知道自己放以前的ptt能有多少，所以用AI搓了一个网页小工具，可以上传Arcaea成绩文件（CSV）计算旧版潜力值（b30）。
+感觉还是对旧版潜力值比较有概念，所以用AI搓了一个网页小工具，可以上传Arcaea成绩文件（CSV）计算旧版潜力值（b30）。
 
 [在线使用](https://aozoranisrsg.github.io/ArcaeaOldPotentialCalculator/)
 
@@ -12,16 +12,15 @@
 
 1. 绑定Yurisaki机器人：在群聊里@Yurisaki发送/a bind xxxxxxxxx，将其中的xxxxxxxxx替换为你的Arcaea好友码。或者私聊发送指令也可以。
 2. 声明账号所有权：对Yurisaki发送/a account claim（同样私聊也可以），随后Yurisaki会引导你完成如下操作：
-    1. 切换搭档：打开游戏，把你的搭档和头像都切换为初始对立（切换头像：先选择一个搭档，再点右边快速设置，点击四个格子里面顶上那个）（技能锁不锁没关系）
+    1. 切换搭档：打开游戏，把你的搭档和头像都切换为Yurisaki指定的头像（切换头像：先选择一个搭档，再点右边快速设置，点击四个格子里面顶上那个）（技能锁不锁没关系）
     2. 验证：对Yurisaki发送/a account check，等待验证。
 
 然后可以通过以下两种方式获得成绩文件。
 
 ### Yurisaki聊天导出
 
-对机器人发送/a export，获得一串地址，然后我也不会用了（
-
-等待好心人教我。
+对机器人发送/a export，获得一串地址，将其输入工具即可自动获取成绩并计算。
+或者你也可以访问'u.yurisaki.top/你的地址'，会直接下载你的成绩文件，然后把里面的best_scores.csv导入工具即可。
 
 ### Yurisaki网站导出
 
