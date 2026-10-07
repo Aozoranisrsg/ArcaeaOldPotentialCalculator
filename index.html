@@ -21,7 +21,7 @@
     <div class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="brand-title-block">
       <div class="brand-title">ARCAEA</div>
-      <div class="brand-subtitle">AI GENERATED UNOFFICIAL FAN-MADE TOOL</div>
+      <div class="brand-subtitle">AI GENERATED UNOFFICIAL TOOL</div>
     </div>
   </div>
 </header>
@@ -30,7 +30,6 @@
   <section class="hero">
     <div class="hero-kicker">ARCAEA OLD POTENTIAL CALCULATOR</div>
     <h1>Arcaea 旧版潜力值计算器</h1>
-    <p class="subtitle">上传新版（v7.0.0+）成绩 CSV，自动还原旧版 ptt（B30 + R10）</p>
     <div class="hero-rule"><span></span><b>◆</b><span></span></div>
   </section>
 
@@ -43,7 +42,8 @@
       <span class="summary-arrow">＋</span>
     </summary>
     <div class="guide-content">
-      <p>本工具需要使用 <strong>best_scores.csv</strong> 成绩文件。可以通过 Yurisaki 机器人使用两种方式获得你的成绩文件。</p>
+      <p>本工具需要使用 <strong>best_scores.csv</strong> 成绩文件，可以通过 Yurisaki 机器人导出你的成绩文件（具体操作见下）。</p>
+      <p>成绩导出是 Yurisaki 根据成绩查询记录提供的非官方导出服务。本工具由个人使用AI制作，借助 Yurisaki 成绩导出服务实现旧算法潜力值计算功能。对于 Yurisaki 机器人使用中遇到的问题，请联系机器人作者。</p>
 
       <h4>前置操作：绑定与验证</h4>
       <ol>
@@ -57,13 +57,14 @@
       </ol>
 
       <h4>方法一：Yurisaki 聊天导出（推荐）</h4>
-      <p>对 Yurisaki 发送 <code>/a export</code>， Yurisaki 会回复一串地址，将地址填入下方，点击“获取成绩”后将自动获取成绩并计算。如果此方法失败，请使用备用方案。</p>
+      <p>对 Yurisaki 发送 <code>/a export</code>， Yurisaki 会回复一串地址，将地址填入下方，点击“获取成绩”后，工具将自动获取成绩并计算。如果此方法失败，请使用备用方案。</p>
 
       <h4>方法一备用方案：</h4>
       <ol>
         <li>使用浏览器访问 <code>u.yurisaki.top/</code>，并在网址后方加上刚才获得的地址，将会直接下载你的成绩文件。</li>
-        <li>解压后可以看到三个 CSV 文件，<strong>本工具只需要其中的 best_scores.csv</strong>，将其放入下方文件选择框即可。</li>
+        <li>解压后，获得三个 CSV 文件，<strong>本工具只需要其中的 best_scores.csv</strong>，将其放入下方文件选择框即可。</li>
       </ol>
+      <p>如果备用方案也失败，那么可能是 Yurisaki 更改了成绩文件导出的方式，请使用方法二。</p>
 
       <h4>方法二：Yurisaki 网站导出</h4>
       <ol>
@@ -106,8 +107,8 @@
           class="yurisaki-input"
           autocomplete="off"
           spellcheck="false"
-          placeholder="输入导出码"
-          aria-label="Yurisaki 导出码"
+          placeholder="输入地址"
+          aria-label="Yurisaki 导出地址"
         >
 
         <button type="button" id="yurisakiBtn" class="yurisaki-btn">
