@@ -518,7 +518,7 @@
         </div>
 
         <div class="result-value">
-          ${oldPtt.toFixed(2)}
+          ${(Math.floor(oldPtt * 100) / 100).toFixed(2)}
         </div>
 
         <div class="result-sub">
@@ -753,7 +753,7 @@
       .addEventListener('click', () => {
 
         const text =
-          `旧版潜力值：${oldPtt.toFixed(2)}\n` +
+          `旧版潜力值：${(Math.floor(oldPtt * 100) / 100).toFixed(2)}\n` +
           `精确值：${oldPtt.toFixed(6)}\n` +
           `B30 总和：${b30Sum.toFixed(6)}\n` +
           `R10 总和：${r10Sum.toFixed(6)}\n` +
