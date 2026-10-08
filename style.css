@@ -489,3 +489,16 @@ tbody tr.r10-row:hover{background:rgba(112,105,157,.19)}
 .site-footer a:hover {
   color: #6b5b95;
 }
+
+.visit-counter {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 1000;
+}
+
+.visit-counter img {
+  width: 130px;
+  height: auto;
+  display: block;
+}
